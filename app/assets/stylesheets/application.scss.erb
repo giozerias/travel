@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+ @import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+ body{
+   background: url(<%= asset_path "bg.jpg" %>) no-repeat;
+   background-size: cover;
+   font-family: 'PT Sans', sans-serif;
+ }
+
+  .container{
+    background: rgba(255, 255, 255, 0.8);
+  }

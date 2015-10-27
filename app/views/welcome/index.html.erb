@@ -1,23 +1,25 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome to my Travel Site</h1>
+<p>This is where I want to travel</p>
 
 <p><%= @homeland %></p>
 
 <ul>
   <% @countries.each do |country| %>
-  <li><%= countries %></li>
-  <end>
+      <li><%= country %></li>
+  <% end %>
 </ul>
 
-<% @country_images.shuffle.each do |pictures| %>
+<% @country_images.shuffle.each do |pic| %>
   <p>
-    <%= image_tag "peru_1.jpeg", alt "pictures of peru" %>
-    <%= image_tag "peru_2.jpg", alt "another pic"%>
+    <%= image_tag pic, alt: "pictures of peru" %>
   </p>
 <% end %>
 
-<% @country_image_hash.each do |k,v| %>
+<% @country_hash.each do |k,v| %>
 <p>
-  <% iamge_tag v, alt: k,v %>
+  <%= image_tag v, alt: k %>
 </p>
 <% end %>
+<p>
+  <%= link_to "About Us", about_path(color: "green", size: 13), class:"btn btn-info" %>
+</p>
