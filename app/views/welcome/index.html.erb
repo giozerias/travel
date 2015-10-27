@@ -1,0 +1,23 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<p><%= @homeland %></p>
+
+<ul>
+  <% @countries.each do |country| %>
+  <li><%= countries %></li>
+  <end>
+</ul>
+
+<% @country_images.shuffle.each do |pictures| %>
+  <p>
+    <%= image_tag "peru_1.jpeg", alt "pictures of peru" %>
+    <%= image_tag "peru_2.jpg", alt "another pic"%>
+  </p>
+<% end %>
+
+<% @country_image_hash.each do |k,v| %>
+<p>
+  <% iamge_tag v, alt: k,v %>
+</p>
+<% end %>
